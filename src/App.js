@@ -1,10 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import { BeatsPerMinuteSelect } from './components/BeatsPerMinute';
+
+import Alert from 'react-bootstrap/Alert'
 
 function App() {
   return (
     <div className="App">
+      <Alert variant="success">This is our new alert!</Alert>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
