@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.scss';
 
 import { BeatsPerMinuteSelect, BeatsPerMinuteSlider } from './components/BeatsPerMinute';
+import { SoundMaker } from './components/SoundMaker';
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -16,6 +17,7 @@ function App() {
         beatsPerMinute={beatsPerMinute} 
         setBeatsPerMinute={setBeatsPerMinute}
       />
+      <SoundMaker beatsPerMinute={beatsPerMinute} />
     </div>
   );
 }
