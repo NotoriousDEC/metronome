@@ -1,29 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 
-import { BeatsPerMinuteSelect } from './components/BeatsPerMinute';
+import { BeatsPerMinuteSelect, BeatsPerMinuteSlider } from './components/BeatsPerMinute';
 
 import Alert from 'react-bootstrap/Alert'
 
 function App() {
+
+  const [beatsPerMinute, setBeatsPerMinute] = useState(60);
+
   return (
     <div className="App">
-      <Alert variant="success">This is our new alert!</Alert>
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello James!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Alert variant="success">{beatsPerMinute}</Alert>     
+      <BeatsPerMinuteSlider 
+        beatsPerMinute={beatsPerMinute} 
+        setBeatsPerMinute={setBeatsPerMinute}
+      />
     </div>
   );
 }
